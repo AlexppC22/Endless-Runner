@@ -21,7 +21,7 @@ namespace AgTech
             //Check for Saved Game
             //If there is, load Game
             //Else, create new Game
-            //Load Game Scene
+            SceneManager.LoadScene(1);
         }
 
         public void ToggleOptionsMenu()
