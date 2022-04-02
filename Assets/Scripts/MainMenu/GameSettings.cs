@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 namespace AgTech
 {
     public class GameSettings : MonoBehaviour
     {
+        public AudioMixer sfxMixer;
+        public AudioMixer musicMixer;
         public void ToggleFullscreen()
         {
 
@@ -17,14 +20,14 @@ namespace AgTech
 
         }
 
-        public void SetSFXVolume()
+        public void SetSFXVolume(float volume)
         {
-
+            sfxMixer.SetFloat("SFXVolume", volume);
         }
 
-        public void SetMusicVolume()
+        public void SetMusicVolume(float volume)
         {
-
+            sfxMixer.SetFloat("MusicVolume", volume);
         }
 
         public void ToggleCredits()
