@@ -222,7 +222,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1360533352}
+        m_TargetAssemblyTypeName: AgTech.GameSettings, Assembly-CSharp
+        m_MethodName: SetResolution
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &21226104
 MonoBehaviour:
@@ -4404,8 +4416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f04b831f486644892ba0d3e703ee7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxMixer: {fileID: 24100000, guid: 16ce1f6df40ceef47baaf5b5b42bc468, type: 2}
-  musicMixer: {fileID: 24100000, guid: 16ce1f6df40ceef47baaf5b5b42bc468, type: 2}
+  audioMixer: {fileID: 24100000, guid: 16ce1f6df40ceef47baaf5b5b42bc468, type: 2}
+  resolutionDropdown: {fileID: 21226103}
 --- !u!1 &1470502461
 GameObject:
   m_ObjectHideFlags: 0
