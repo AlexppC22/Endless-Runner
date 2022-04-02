@@ -10,9 +10,9 @@ namespace AgTech
     {
         public AudioMixer sfxMixer;
         public AudioMixer musicMixer;
-        public void ToggleFullscreen()
+        public void ToggleFullscreen(bool isFullscreen)
         {
-
+            Screen.fullScreen = isFullscreen;
         }
 
         public void SetResolution()
