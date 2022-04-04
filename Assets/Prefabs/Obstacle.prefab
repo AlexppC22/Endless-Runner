@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 500
+  speed: 1200
   obstacleRB: {fileID: 5866484770221559268}
 --- !u!50 &5866484770221559268
 Rigidbody2D:

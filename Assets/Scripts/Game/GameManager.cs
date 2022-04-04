@@ -20,6 +20,9 @@ namespace AgTech
                 Destroy(this);
             else
                 instance = this;
+            
+            currentMoney = PlayerPrefs.GetInt("Money");
+            AddMoney(0);
         }   
 
         public GameUI gameUI;
@@ -36,6 +39,7 @@ namespace AgTech
         public void AddMoney(int value)
         {
             currentMoney += value;
+            PlayerPrefs.SetInt("Money", currentMoney);
             gameUI.UpdateMoney(currentMoney);
         }
         #endregion
@@ -48,7 +52,7 @@ namespace AgTech
             {
                 Debug.Log("Fim  de Jogo");
                 gameRunning = false;
-                gameUI.ToggleEndGameUI(false);
+                gameUI.ToggleEndGameUI(true);
                 player.SetDead();
             }
             else

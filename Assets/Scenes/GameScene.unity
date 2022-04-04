@@ -561,6 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 998275896}
+  gameRunning: 1
   currentMoney: 0
   gameUI: {fileID: 815738293}
 --- !u!4 &473249908
@@ -1107,6 +1108,7 @@ MonoBehaviour:
   jumpForce: 350
   currentLife: 0
   maxLife: 0
+  isDead: 0
 --- !u!1 &1017481103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,6 +1343,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 1}
+--- !u!1 &1279153444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1279153445}
+  - component: {fileID: 1279153446}
+  m_Layer: 0
+  m_Name: ObjectDestroyer
+  m_TagString: ObjectDestroyer
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1279153445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279153444}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 10, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1279153446
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279153444}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1317923434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,7 +1854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnedObject: {fileID: 3120776106070761951, guid: bad0d3e4797d1cf49b33bd1d9915f79b, type: 3}
-  spawnDelay: 2.5
+  spawnDelay: 5
 --- !u!4 &1714426619
 Transform:
   m_ObjectHideFlags: 0
@@ -1804,7 +1863,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714426617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -3.5, z: 0}
+  m_LocalPosition: {x: 10, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2479,6 +2538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle - Tester
       objectReference: {fileID: 0}
+    - target: {fileID: 3039170592010748255, guid: 79c6d086a17d2464ab30f9ff82d33cac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79c6d086a17d2464ab30f9ff82d33cac, type: 3}
 --- !u!1001 &3120776105869477366
@@ -2535,6 +2598,10 @@ PrefabInstance:
     - target: {fileID: 3120776106070761951, guid: bad0d3e4797d1cf49b33bd1d9915f79b, type: 3}
       propertyPath: m_Name
       value: Money - Tester
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120776106070761951, guid: bad0d3e4797d1cf49b33bd1d9915f79b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad0d3e4797d1cf49b33bd1d9915f79b, type: 3}

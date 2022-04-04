@@ -31,7 +31,6 @@ namespace AgTech
 
         private void Jump()
         {
-            Debug.Log("AAA");
             this.playerRb.AddForce(new Vector2(0,jumpForce), ForceMode2D.Force);
         }
 

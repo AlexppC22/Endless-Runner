@@ -24,7 +24,10 @@ namespace AgTech
                 Debug.Log("Colidiu com obstaculo");
                 GameManager.instance.TakeDamage(damage);
                 Destroy(this.gameObject);
-            }    
+            }
+            
+            if(other.gameObject.CompareTag("ObjectDestroyer"))
+                Destroy(this.gameObject);    
         }
     }
 }
