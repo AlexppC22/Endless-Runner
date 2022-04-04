@@ -14,6 +14,7 @@ namespace AgTech
         [Header("Life")]
         public int currentLife;
         public int maxLife;
+        public bool isDead;
 
         private void Awake() 
         {
@@ -24,7 +25,7 @@ namespace AgTech
 
         private void Update() 
         {
-            if(canJump && Input.GetKeyDown(KeyCode.Space))
+            if(canJump && Input.GetKeyDown(KeyCode.Space) && !isDead)
                 Jump();
         }
 
@@ -43,6 +44,15 @@ namespace AgTech
         {
             currentLife = maxLife;
             //UpdateUI
+        }
+
+        public void SetDead()
+        {
+            isDead = true;
+        }
+        public void SetAlive()
+        {
+            isDead = false;
         }
 
     }

@@ -8,6 +8,7 @@ namespace AgTech
     {
         public static GameManager instance;
         public Player player;
+        public bool gameRunning = true;
 
         [Header("Money")]
         public int currentMoney;
@@ -23,6 +24,14 @@ namespace AgTech
 
         public GameUI gameUI;
 
+        public void RestartGame()
+        {
+            Debug.Log("Restart the game");
+            gameRunning = true;
+            player.SetAlive();
+            gameUI.ToggleEndGameUI(false);
+        }
+
         #region MoneyManager
         public void AddMoney(int value)
         {
@@ -36,7 +45,12 @@ namespace AgTech
         {
             player.currentLife--;
             if(player.currentLife <= 0)
-                Debug.Log("Fim de Jogo");
+            {
+                Debug.Log("Fim  de Jogo");
+                gameRunning = false;
+                gameUI.ToggleEndGameUI(false);
+                player.SetDead();
+            }
             else
                 Debug.Log("Update da interface");
         }
