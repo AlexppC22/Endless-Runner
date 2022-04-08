@@ -36,6 +36,7 @@ namespace AgTech
         {
             //Load HUB Scene
             Debug.Log("Go to HUB");
+            SceneManager.LoadScene(2);
         }   
         public void RetryButton()
         {
