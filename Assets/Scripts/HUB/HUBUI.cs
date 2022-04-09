@@ -18,7 +18,7 @@ namespace AgTech
         [Header("Upgrade")]
         [SerializeField] UpgradeManager upgradeManager;
         [SerializeField] int upgrade0Increase;
-        [SerializeField] int upgrade1Increase;
+        [SerializeField] float upgrade1Increase;
         [SerializeField] int upgrade2Increase;
         [SerializeField] GameObject upgradeMenu;
         [SerializeField] TextMeshProUGUI upgradeDescriptionText;

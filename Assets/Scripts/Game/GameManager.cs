@@ -12,6 +12,9 @@ namespace AgTech
 
         [Header("Money")]
         public int currentMoney;
+
+        [Header("Upgrades")]
+        public UpgradeManager upgradeManager;
         
 
         private void Awake() 

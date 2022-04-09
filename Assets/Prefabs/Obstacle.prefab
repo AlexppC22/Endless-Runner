@@ -123,9 +123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e560a017c2fb6f4e9add984e66e7078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 7
+  objectRB: {fileID: 5866484770221559268}
   damage: 1
-  speed: 1200
-  obstacleRB: {fileID: 5866484770221559268}
 --- !u!50 &5866484770221559268
 Rigidbody2D:
   serializedVersion: 4

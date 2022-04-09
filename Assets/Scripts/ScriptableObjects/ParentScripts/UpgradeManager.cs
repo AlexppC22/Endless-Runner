@@ -8,7 +8,7 @@ namespace AgTech
     public class UpgradeManager : ScriptableObject
     {
         public int playerLife;
-        public int gameSpd;
+        public float gameSpd;
         public int playerJumps;
     }
 }

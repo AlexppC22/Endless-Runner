@@ -22,7 +22,7 @@ namespace AgTech
 
         public void Spawn()
         {
-            Instantiate(spawnedObject, this.transform.position, Quaternion.identity);
+            GameObject newObject = Instantiate(spawnedObject, this.transform.position, Quaternion.identity);
             timer = 0;
         }
     }
