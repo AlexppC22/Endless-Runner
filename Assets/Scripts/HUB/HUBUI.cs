@@ -13,18 +13,16 @@ namespace AgTech
         [SerializeField] TextMeshProUGUI descriptionText;
         [SerializeField] TextMeshProUGUI moneyShopText;
         [SerializeField] TextMeshProUGUI moneyHUBText;
+        
+        [SerializeField] TextMeshProUGUI moneyUpradeText;
         int itemValue;
         public int itemID = -1;
         [Header("Upgrade")]
-        [SerializeField] UpgradeManager upgradeManager;
-        [SerializeField] int upgrade0Increase;
-        [SerializeField] float upgrade1Increase;
-        [SerializeField] int upgrade2Increase;
         [SerializeField] GameObject upgradeMenu;
-        [SerializeField] TextMeshProUGUI upgradeDescriptionText;
-        [SerializeField] TextMeshProUGUI moneyUpradeText;
-        public int upgradeID = -1;
-        int upgradeValue;
+        public UpgradeShopManager upgradeShopManager;
+        [SerializeField] TextMeshProUGUI lifeUpgradeHUBText;
+        [SerializeField] TextMeshProUGUI speedUpgradeHUBText;
+        [SerializeField] TextMeshProUGUI jumpsUpgradeHUBText;
 
         [Header("Inventory")]
         [SerializeField] InventoryManager inventory;
@@ -42,10 +40,25 @@ namespace AgTech
         private void Start() 
         {
             LoadInventoryData();
-            LoadUpgradeManager();
+            upgradeShopManager.LoadUpgradeManager();
+            SetUpMoneyTexts();
+            UpdateUpgradeHUBTexts(upgradeShopManager.upgradeManager);
+        }
+
+        public void SetUpMoneyTexts()
+        {
             moneyHUBText.text = PlayerPrefs.GetInt("Money").ToString();
             moneyShopText.text = PlayerPrefs.GetInt("Money").ToString();
+            moneyUpradeText.text = PlayerPrefs.GetInt("Money").ToString();
         }
+        public void UpdateUpgradeHUBTexts(UpgradeManager upgradeManager)
+        {
+            lifeUpgradeHUBText.text = "Players Life: " + (1 + upgradeManager.playerLife) + "/4";
+            speedUpgradeHUBText.text = "Players Speed: " + (7 + upgradeManager.gameSpd) + "/10";
+            jumpsUpgradeHUBText.text = "Players Jumps: " + (1 + upgradeManager.playerJumps) + "/4";
+
+        }
+
 
         #region Inventory
         private void LoadInventoryData()
@@ -114,61 +127,15 @@ namespace AgTech
                     this.item3Quantity ++;
                     break;
             }
+
+            PlayerPrefs.SetInt("Money", itemValue - PlayerPrefs.GetInt("Money"));
+
             UpdateInvetoryVisuals();
             UpdateInvetoryManager();
+            SetUpMoneyTexts();
         }
         #endregion
-        #region Upgrade
-        public void ToggleUpgradeSelection(Item upgrade)
-        {
-            if(upgrade.id == upgradeID)
-            {
-                upgradeDescriptionText.text = " ";
-                upgradeID = -1;
-            }
-            else
-            {
-                SelectUpgrade(upgrade);
-            }
-        }
-        private void SelectUpgrade(Item upgrade)
-        {
-            upgradeDescriptionText.text = upgrade.description;
-            upgradeValue = upgrade.value;
-            upgradeID = upgrade.id;
-        }
-        public void BuyUpgrade()
-        {
-            if(!(upgradeValue - PlayerPrefs.GetInt("Money") > 0))
-                return;
-
-            switch(upgradeID)
-            {
-                case 0:
-                    this.item0Quantity ++;
-                    break;
-                case 1:
-                    this.item1Quantity ++;
-                    break;
-                case 2:
-                    this.item2Quantity ++;
-                    break;
-            }
-            UpdateInvetoryManager();
-        }
-        private void LoadUpgradeManager()
-        {
-            this.upgrade0Increase = upgradeManager.playerLife;
-            this.upgrade1Increase = upgradeManager.gameSpd;
-            this.upgrade2Increase = upgradeManager.playerJumps;
-        }
-        private void UpdateUpgradeManager()
-        {
-            upgradeManager.playerLife = this.upgrade0Increase;
-            upgradeManager.gameSpd = this.upgrade1Increase;
-            upgradeManager.playerJumps = this.upgrade2Increase;
-        }
-        #endregion
+        
         public void LoadMenu()
         {
             SceneManager.LoadScene(0);

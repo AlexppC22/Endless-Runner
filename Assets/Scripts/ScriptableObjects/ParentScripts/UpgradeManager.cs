@@ -10,6 +10,9 @@ namespace AgTech
         public int playerLife;
         public float gameSpd;
         public int playerJumps;
+        public int playerLifeLimit;
+        public int gameSpdLimit;
+        public int playerJumpsLimit;
     }
 }
 

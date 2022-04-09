@@ -759,6 +759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   value: 10
+  limit: 0
   description: 'Cost: 10 /n Axe: Cuts the first five obstacles from the game'
   hubUI: {fileID: 1217136616}
 --- !u!1 &224031690
@@ -1228,7 +1229,7 @@ GameObject:
   - component: {fileID: 329142944}
   - component: {fileID: 329142943}
   m_Layer: 5
-  m_Name: ItemImageText
+  m_Name: JumpUpgradeHUBImageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1275,8 +1276,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd883a248fced426693e05d482ebc9fc, type: 2}
+  m_sharedMaterial: {fileID: -4171563015097924827, guid: dd883a248fced426693e05d482ebc9fc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2276,7 +2277,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   value: 50
-  description: Increase players total life. To a maximum of 3.
+  limit: 0
+  description: 'Costs: 50
+
+    Increase players total life. To a maximum of 3.'
   hubUI: {fileID: 1217136616}
 --- !u!114 &569112553
 MonoBehaviour:
@@ -2322,7 +2326,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 816025283}
+      - m_Target: {fileID: 569112552}
         m_TargetAssemblyTypeName: AgTech.Item, Assembly-CSharp
         m_MethodName: SetUpgrade
         m_Mode: 1
@@ -2519,6 +2523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   value: 100
+  limit: 0
   description: 'Cost: 100 /n Evil Eye: Revives the player but only with one life,
     once per game'
   hubUI: {fileID: 1217136616}
@@ -2803,6 +2808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   value: 50
+  limit: 0
   description: 'Cost: 50 /n Blood Gem: Converts live obstacles into money for the
     next run'
   hubUI: {fileID: 1217136616}
@@ -2993,7 +2999,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   value: 50
-  description: Increase the number of jumps. To a total of 3.
+  limit: 0
+  description: 'Costs: 50
+
+    Increase the number of jumps. To a total of 3.'
   hubUI: {fileID: 1217136616}
 --- !u!114 &816025284
 MonoBehaviour:
@@ -4175,6 +4184,7 @@ GameObject:
   - component: {fileID: 1217136613}
   - component: {fileID: 1217136612}
   - component: {fileID: 1217136616}
+  - component: {fileID: 1217136617}
   m_Layer: 5
   m_Name: HUBUI - Canvas
   m_TagString: Untagged
@@ -4285,15 +4295,13 @@ MonoBehaviour:
   descriptionText: {fileID: 559761752}
   moneyShopText: {fileID: 2085190565}
   moneyHUBText: {fileID: 1518565974}
-  itemID: -1
-  upgradeManager: {fileID: 11400000, guid: 3db83c9d31826404c9d5f8eeef5efd20, type: 2}
-  upgrade0Increase: 0
-  upgrade1Increase: 0
-  upgrade2Increase: 0
-  upgradeMenu: {fileID: 224031690}
-  upgradeDescriptionText: {fileID: 1929905601}
   moneyUpradeText: {fileID: 618980069}
-  upgradeID: -1
+  itemID: -1
+  upgradeMenu: {fileID: 224031690}
+  upgradeShopManager: {fileID: 1217136617}
+  lifeUpgradeHUBText: {fileID: 1253042310}
+  speedUpgradeHUBText: {fileID: 2146559456}
+  jumpsUpgradeHUBText: {fileID: 329142943}
   inventory: {fileID: 11400000, guid: 8abe98038dec555409125f2af807f7db, type: 2}
   item0Quantity: 0
   item1Quantity: 0
@@ -4303,6 +4311,22 @@ MonoBehaviour:
   item1QuantityText: {fileID: 1397334793}
   item2QuantityText: {fileID: 317449093}
   item3QuantityText: {fileID: 438572697}
+--- !u!114 &1217136617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217136611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c659601c5a9f62f4f89fb892a0ddd628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeManager: {fileID: 11400000, guid: 3db83c9d31826404c9d5f8eeef5efd20, type: 2}
+  hubUI: {fileID: 1217136616}
+  upgradeID: -1
+  upgradeDescriptionText: {fileID: 1929905601}
 --- !u!1 &1250961374
 GameObject:
   m_ObjectHideFlags: 0
@@ -4391,7 +4415,7 @@ GameObject:
   - component: {fileID: 1253042311}
   - component: {fileID: 1253042310}
   m_Layer: 5
-  m_Name: ItemImageText
+  m_Name: LifeUpgradeHUBImageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4438,8 +4462,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd883a248fced426693e05d482ebc9fc, type: 2}
+  m_sharedMaterial: {fileID: -4171563015097924827, guid: dd883a248fced426693e05d482ebc9fc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4567,7 +4591,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   value: 50
-  description: Increase the Players speed, making the game faster.
+  limit: 0
+  description: 'Costs: 50
+
+    Increase the Players speed, making the game faster.'
   hubUI: {fileID: 1217136616}
 --- !u!114 &1352044383
 MonoBehaviour:
@@ -4613,7 +4640,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 816025283}
+      - m_Target: {fileID: 1352044382}
         m_TargetAssemblyTypeName: AgTech.Item, Assembly-CSharp
         m_MethodName: SetUpgrade
         m_Mode: 1
@@ -4884,7 +4911,7 @@ GameObject:
   - component: {fileID: 1422830523}
   - component: {fileID: 1422830522}
   m_Layer: 5
-  m_Name: ItemImage (1)
+  m_Name: LifeUpgradeHUBImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5141,8 +5168,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd883a248fced426693e05d482ebc9fc, type: 2}
+  m_sharedMaterial: {fileID: -4171563015097924827, guid: dd883a248fced426693e05d482ebc9fc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6701,7 +6728,7 @@ GameObject:
   - component: {fileID: 1986467586}
   - component: {fileID: 1986467585}
   m_Layer: 5
-  m_Name: ItemImage (2)
+  m_Name: SpeedUpgradeHUBImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6777,7 +6804,7 @@ GameObject:
   - component: {fileID: 1998764540}
   - component: {fileID: 1998764539}
   m_Layer: 5
-  m_Name: ItemImage (3)
+  m_Name: JumpUpgradeHUBImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6988,6 +7015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   value: 5
+  limit: 0
   description: 'Cost: 5 /n Life Potion: Protects the player from being hit once per
     game. /n'
   hubUI: {fileID: 1217136616}
@@ -7356,7 +7384,7 @@ GameObject:
   - component: {fileID: 2146559457}
   - component: {fileID: 2146559456}
   m_Layer: 5
-  m_Name: ItemImageText
+  m_Name: SpeedUpgradeHUBImageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7403,8 +7431,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd883a248fced426693e05d482ebc9fc, type: 2}
+  m_sharedMaterial: {fileID: -4171563015097924827, guid: dd883a248fced426693e05d482ebc9fc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

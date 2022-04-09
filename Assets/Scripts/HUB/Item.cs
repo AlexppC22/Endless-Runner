@@ -8,6 +8,8 @@ namespace AgTech
     {
         public int id;
         public int value;
+        public int limit;
+        [TextArea]
         public string description;
 
         public HUBUI hubUI;
@@ -18,7 +20,7 @@ namespace AgTech
         }
         public void SetUpgrade()
         {
-            hubUI.ToggleUpgradeSelection(this);
+            hubUI.upgradeShopManager.ToggleUpgradeSelection(this);
         }
     }
 }
