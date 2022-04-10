@@ -62,8 +62,7 @@ namespace AgTech
                 gameUI.ToggleEndGameUI(true);
                 player.SetDead();
             }
-            else
-                gameUI.UpdateLifeDots();
+            gameUI.UpdateLifeDots();
         }
         #endregion
     }

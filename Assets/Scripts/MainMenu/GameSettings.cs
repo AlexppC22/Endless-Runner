@@ -64,12 +64,12 @@ namespace AgTech
 
         public void SetSFXVolume(float volume)
         {
-            audioMixer.SetFloat("SFXVolume", volume);
+            audioMixer.SetFloat("SFXVolume", Mathf.Log10 (volume) * 20);
         }
 
         public void SetMusicVolume(float volume)
         {
-            audioMixer.SetFloat("MusicVolume", volume);
+            audioMixer.SetFloat("MusicVolume", Mathf.Log10 (volume) * 20);
         }
 
         public void ToggleCredits()

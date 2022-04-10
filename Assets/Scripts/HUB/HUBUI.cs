@@ -111,7 +111,6 @@ namespace AgTech
         {
             if(!(PlayerPrefs.GetInt("Money") - itemValue  > 0))
             {
-                Debug.Log("Cant buy this item");
                 return;
             }
 
