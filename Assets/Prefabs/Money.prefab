@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   objectRB: {fileID: 81171320385752565}
+  collisionSFX: {fileID: 8300000, guid: e770947fc97be0f45a872ff214a6f1c7, type: 3}
   value: 1
 --- !u!50 &81171320385752565
 Rigidbody2D:

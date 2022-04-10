@@ -109,8 +109,11 @@ namespace AgTech
 
         public void BuyItem()
         {
-            if(!(itemValue - PlayerPrefs.GetInt("Money") > 0))
+            if(!(PlayerPrefs.GetInt("Money") - itemValue  > 0))
+            {
+                Debug.Log("Cant buy this item");
                 return;
+            }
 
             switch(itemID)
             {
@@ -128,7 +131,7 @@ namespace AgTech
                     break;
             }
 
-            PlayerPrefs.SetInt("Money", itemValue - PlayerPrefs.GetInt("Money"));
+            PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") - itemValue);
 
             UpdateInvetoryVisuals();
             UpdateInvetoryManager();

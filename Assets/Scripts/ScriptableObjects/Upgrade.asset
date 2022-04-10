@@ -15,3 +15,6 @@ MonoBehaviour:
   playerLife: 0
   gameSpd: 0
   playerJumps: 0
+  playerLifeLimit: 3
+  gameSpdLimit: 2
+  playerJumpsLimit: 3

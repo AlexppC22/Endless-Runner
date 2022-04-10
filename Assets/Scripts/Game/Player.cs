@@ -13,6 +13,7 @@ namespace AgTech
         public int numberOfJumps;
         public int maxNumberOfJumps;
         public BoxCollider2D boxCollider2D;
+        public AudioClip jumpClip;
         [SerializeField] private LayerMask groundLayerMask;
 
         [Header("Life")]
@@ -76,6 +77,7 @@ namespace AgTech
         #endregion
         private void Jump()
         {
+            SFXManager.instance.PlaySFX(jumpClip);
             this.playerRb.AddForce(new Vector2(0,jumpForce), ForceMode2D.Force);
         }
 

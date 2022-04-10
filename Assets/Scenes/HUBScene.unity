@@ -707,6 +707,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b6d1b4a1c8da01a4ea7972b477368d6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &178009970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,7 +772,9 @@ MonoBehaviour:
   id: 1
   value: 10
   limit: 0
-  description: 'Cost: 10 /n Axe: Cuts the first five obstacles from the game'
+  description: 'Cost: 10
+
+    Axe: Cuts the first five obstacles from the game'
   hubUI: {fileID: 1217136616}
 --- !u!1 &224031690
 GameObject:
@@ -1775,6 +1789,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 889881dfc61451e4895278551aa9d3ae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &433430261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2280,7 +2306,7 @@ MonoBehaviour:
   limit: 0
   description: 'Costs: 50
 
-    Increase players total life. To a maximum of 3.'
+    Increase players total life. To a maximum of 4 life.'
   hubUI: {fileID: 1217136616}
 --- !u!114 &569112553
 MonoBehaviour:
@@ -2333,6 +2359,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b6d1b4a1c8da01a4ea7972b477368d6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2471,6 +2509,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b6d1b4a1c8da01a4ea7972b477368d6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &578754803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2524,7 +2574,9 @@ MonoBehaviour:
   id: 3
   value: 100
   limit: 0
-  description: 'Cost: 100 /n Evil Eye: Revives the player but only with one life,
+  description: 'Cost: 100
+
+    Evil Eye: Revives the player but only with one life,
     once per game'
   hubUI: {fileID: 1217136616}
 --- !u!1 &618980067
@@ -2756,6 +2808,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b6d1b4a1c8da01a4ea7972b477368d6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &647693399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2809,7 +2873,9 @@ MonoBehaviour:
   id: 2
   value: 50
   limit: 0
-  description: 'Cost: 50 /n Blood Gem: Converts live obstacles into money for the
+  description: 'Cost: 50
+
+    Blood Gem: Converts live obstacles into money for the
     next run'
   hubUI: {fileID: 1217136616}
 --- !u!1 &739031736
@@ -2902,6 +2968,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b6d1b4a1c8da01a4ea7972b477368d6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3002,7 +3080,7 @@ MonoBehaviour:
   limit: 0
   description: 'Costs: 50
 
-    Increase the number of jumps. To a total of 3.'
+    Increase the number of jumps. To a total of 4 jumps.'
   hubUI: {fileID: 1217136616}
 --- !u!114 &816025284
 MonoBehaviour:
@@ -3056,6 +3134,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b6d1b4a1c8da01a4ea7972b477368d6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3181,13 +3271,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1217136616}
-        m_TargetAssemblyTypeName: AgTech.HUBUI, Assembly-CSharp
-        m_MethodName: BuyItem
+      - m_Target: {fileID: 1217136617}
+        m_TargetAssemblyTypeName: AgTech.UpgradeShopManager, Assembly-CSharp
+        m_MethodName: BuyUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 889881dfc61451e4895278551aa9d3ae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3357,6 +3459,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b6d1b4a1c8da01a4ea7972b477368d6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4594,7 +4708,8 @@ MonoBehaviour:
   limit: 0
   description: 'Costs: 50
 
-    Increase the Players speed, making the game faster.'
+    Increase the Players speed, making the game faster.
+    To a maximun of 10 km/h.'
   hubUI: {fileID: 1217136616}
 --- !u!114 &1352044383
 MonoBehaviour:
@@ -4648,6 +4763,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b6d1b4a1c8da01a4ea7972b477368d6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5606,6 +5733,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b6d1b4a1c8da01a4ea7972b477368d6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1545230801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6334,6 +6473,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b6d1b4a1c8da01a4ea7972b477368d6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1922862205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6963,6 +7114,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2044856856}
+        m_TargetAssemblyTypeName: AgTech.SFXManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b6d1b4a1c8da01a4ea7972b477368d6b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2009491302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7016,8 +7179,10 @@ MonoBehaviour:
   id: 0
   value: 5
   limit: 0
-  description: 'Cost: 5 /n Life Potion: Protects the player from being hit once per
-    game. /n'
+  description: 'Cost: 5
+
+    Life Potion: Protects the player from being hit once
+    per game. /n'
   hubUI: {fileID: 1217136616}
 --- !u!1 &2019054452
 GameObject:
@@ -7162,6 +7327,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036103575}
   m_CullTransparentMesh: 1
+--- !u!1001 &2044856855
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3960317549024188996, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c04625ab9229387489c3f395f0f8d122, type: 3}
+    - target: {fileID: 3960317549207491881, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_Name
+      value: AudioController
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960317549207491882, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960317549207491882, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 423.05368
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960317549207491882, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 272.01602
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960317549207491882, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -89.88257
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960317549207491882, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960317549207491882, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960317549207491882, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960317549207491882, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960317549207491882, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960317549207491882, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3960317549207491882, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+--- !u!114 &2044856856 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3960317549207491883, guid: 348d0f2eeab83074d8dd91229bb16f61, type: 3}
+  m_PrefabInstance: {fileID: 2044856855}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24ec0f8a38dc404c8af0c3d206f4c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2085190563
 GameObject:
   m_ObjectHideFlags: 0

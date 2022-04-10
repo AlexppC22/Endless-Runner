@@ -9,6 +9,7 @@ namespace AgTech
         public int value;
         public override void PlayerCollision()
         {   
+            base.PlayerCollision();
             GameManager.instance.AddMoney(value);
         }
     }

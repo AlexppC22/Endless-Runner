@@ -10,6 +10,7 @@ namespace AgTech
 
         public override void PlayerCollision()
         {   
+            base.PlayerCollision();
             GameManager.instance.TakeDamage(damage);
         }
     }

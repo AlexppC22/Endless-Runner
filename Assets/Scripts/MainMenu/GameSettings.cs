@@ -12,12 +12,20 @@ namespace AgTech
     {
         public AudioMixer audioMixer;
         public TMP_Dropdown resolutionDropdown;
-        
+        [SerializeField] Slider sfxSlider;
+        [SerializeField] Slider musicSlider;
         private Resolution[] resolutions;
         private List<string> resolutionOptions = new List<string>();
         private void Start() 
         {      
             SetUpResolutionDropdown();
+            SetUpAudioScrollers();
+        }
+
+        private void SetUpAudioScrollers()
+        {
+            // sfxSlider.value = audioMixer.GetFloat("SFXVolume");
+            // musicSlider.value = audioMixer.GetFloat("MusicVolume", out musicSlider.value);
         }
 
         public void ToggleFullscreen(bool isFullscreen)

@@ -8,6 +8,8 @@ namespace AgTech
     {
         public GameObject spawnedObject;
         public float spawnDelay;
+        public float spawnDelayMin;
+        public float spawnDelayMax;
         float timer;
 
         private void Update() 
@@ -17,7 +19,12 @@ namespace AgTech
             if(timer > spawnDelay)
                 Spawn();
             else
-                timer += Time.deltaTime;        
+            {
+                float newSpawnDelay = Random.Range(spawnDelayMin, spawnDelayMax);
+                spawnDelay = newSpawnDelay;
+                timer += Time.deltaTime;
+            }
+                       
         }
 
         public void Spawn()

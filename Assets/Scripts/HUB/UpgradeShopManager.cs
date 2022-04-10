@@ -51,7 +51,7 @@ namespace AgTech
         }
         public void BuyUpgrade()
         {
-            if(!(upgradeValue - PlayerPrefs.GetInt("Money") > 0))
+            if(!(PlayerPrefs.GetInt("Money") - upgradeValue > 0))
                 return;
 
             switch(upgradeID)
@@ -94,7 +94,7 @@ namespace AgTech
                     }
                     break;
             }
-            PlayerPrefs.SetInt("Money", upgradeValue - PlayerPrefs.GetInt("Money"));
+            PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") - upgradeValue);
             UpdateUpgradeManager();
             hubUI.UpdateUpgradeHUBTexts(upgradeManager);
             hubUI.SetUpMoneyTexts();

@@ -8,6 +8,7 @@ namespace AgTech
     {
         public float speed;
         public Rigidbody2D objectRB;
+        public AudioClip collisionSFX;
 
         protected void Awake() 
         {
@@ -37,7 +38,7 @@ namespace AgTech
 
         public virtual void PlayerCollision()
         {
-            Debug.Log("Collided with player");
+            SFXManager.instance.PlaySFX(collisionSFX);
         }
     }
 }

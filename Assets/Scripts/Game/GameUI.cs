@@ -20,11 +20,18 @@ namespace AgTech
         public void UpdateMoney(int currentMoney)
         {
             moneyText.text = currentMoney.ToString();
+            endGameMoneyText.text = currentMoney.ToString();
         }
 
         public void UpdateLifeDots()
         {
-            
+            for(int i = 0; i < lifeDots.Length; i++)
+            {
+                if(i < GameManager.instance.player.currentLife)
+                    lifeDots[i].gameObject.SetActive(true);
+                else
+                    lifeDots[i].gameObject.SetActive(false);
+            }
         }
 
         public void ToggleEndGameUI(bool toggle)
@@ -34,13 +41,10 @@ namespace AgTech
 
         public void HUBButton()
         {
-            //Load HUB Scene
-            Debug.Log("Go to HUB");
             SceneManager.LoadScene(2);
         }   
         public void RetryButton()
         {
-            Debug.Log("Restart the game");
             GameManager.instance.RestartGame();
         }
     }
